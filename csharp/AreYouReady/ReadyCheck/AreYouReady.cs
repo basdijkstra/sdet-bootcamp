@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
 
-namespace SdetBootcamp.ReadyCheck
+namespace AreYouReady.ReadyCheck
 {
     [TestFixture]
     public class AreYouReady
