@@ -4,7 +4,7 @@ using SdetBootcampDay1.TestObjects;
 namespace SdetBootcampDay1.Exercises
 {
     [TestFixture]
-    public class Exercises2
+    public class Exercises02
     {
         /**
          * TODO: rewrite these three tests into a single, parameterized test.

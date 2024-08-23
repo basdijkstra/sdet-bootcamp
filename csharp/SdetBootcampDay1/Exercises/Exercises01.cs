@@ -16,6 +16,10 @@ namespace SdetBootcampDay1.Exercises
             /**
              * TODO: add an assertion that verifies that the resulting balance is 200.
              */
+
+            /**
+             * TODO: add an assertion that verifies that the resulting balance is greater than 199.
+             */
         }
 
         [Test]
