@@ -9,6 +9,10 @@ class AccountsOverviewPage {
     selectRequestLoan() {
         this.sideMenu.selectRequestLoan()
     }
+
+    getSideMenuHeader() {
+        return cy.get('h2')
+    }
 }
 
 export default AccountsOverviewPage
