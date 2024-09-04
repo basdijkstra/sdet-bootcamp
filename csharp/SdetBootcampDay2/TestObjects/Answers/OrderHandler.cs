@@ -8,7 +8,8 @@
         /**
          * TODO: can you apply Dependency Inversion here to make this code more flexible,
          * allowing users to inject the stock, and thereby make the code easier to test?
-         * Do the same for the PaymentProcessor.
+         * Do the same for the PaymentProcessor. You do not need to create interfaces as
+         * was shown in the example (although if you want to, be my guest!)
          * After you have done that, update the existing tests and add the tests that were
          * not possible before.
          */
