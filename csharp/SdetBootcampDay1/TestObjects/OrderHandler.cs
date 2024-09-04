@@ -3,12 +3,15 @@
     public class OrderHandler
     {
         private IDictionary<OrderItem, int>? stock = new Dictionary<OrderItem, int>();
+        private readonly PaymentProcessor paymentProcessor;
 
         public OrderHandler()
         {
             this.stock.Add(OrderItem.FIFA_24, 10);
             this.stock.Add(OrderItem.Fortnite, 100);
             this.stock.Add(OrderItem.SuperMarioBros3, 5);
+
+            this.paymentProcessor = new PaymentProcessor(PaymentProcessorType.Stripe);
         }
 
         public bool OrderAndPay(OrderItem item, int quantity)
@@ -25,7 +28,7 @@
 
             this.stock[item] -= quantity;
 
-            return PaymentProcessor.PayFor(item, quantity);
+            return this.paymentProcessor.PayFor(item, quantity);
         }
 
         public void AddStock(OrderItem item, int quantity)
