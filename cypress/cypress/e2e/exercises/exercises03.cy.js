@@ -37,6 +37,6 @@ describe('Exercises 03 - before', () => {
     /**
      * TODO: (EXTRA) usually, the password also varies from one user to the next.
      *   Can you figure out how to also parameterize that? Feel free to use Google,
-     *   StackOverflow, ChatGPT or any other source to find an answer.
+     *   StackOverflow, ChatGPT or any other acceptable source to find an answer.
      */
 })
