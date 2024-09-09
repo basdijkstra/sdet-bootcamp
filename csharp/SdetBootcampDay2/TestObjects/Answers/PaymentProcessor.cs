@@ -9,7 +9,7 @@
             this.paymentProcessorType = paymentProcessorType;
         }
 
-        public bool PayFor(OrderItem item, int quantity)
+        public virtual bool PayFor(OrderItem item, int quantity)
         {
             // With Stripe, you can pay for every order.
             if (this.paymentProcessorType.Equals(PaymentProcessorType.Stripe))
