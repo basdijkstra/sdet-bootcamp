@@ -58,9 +58,10 @@ jobs:
         working-directory: ./csharp/SdetBootcampDay3
         run: dotnet test --framework ${{ matrix.framework }} --no-restore --no-build --verbosity normal --filter Name~Answers
       
+      - name: Install dependencies for Cypress project
+        working-directory: ./cypress
+        run: npm install
+        
       - name: Run tests from day 4
-        uses: cypress-io/github-action@v6
-        with:
-          browser: chrome
-          project: ./cypress
-          spec: ./cypress/e2e/answers
+        working-directory: ./cypress
+        run: npx cypress run --spec ./cypress/e2e/answers
