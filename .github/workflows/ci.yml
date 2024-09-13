@@ -60,7 +60,6 @@ jobs:
       
       - name: Run tests from day 4
         uses: cypress-io/github-action@v6
-        working-directory: ./cypress
         with:
           browser: chrome
-          spec: ./cypress/e2e/answers
+          spec: ./cypress/cypress/e2e/answers
