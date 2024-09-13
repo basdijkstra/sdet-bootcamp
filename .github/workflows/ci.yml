@@ -62,4 +62,5 @@ jobs:
         uses: cypress-io/github-action@v6
         with:
           browser: chrome
-          spec: ./cypress/cypress/e2e/answers
+          project: ./cypress
+          spec: ./cypress/e2e/answers
