@@ -70,10 +70,9 @@ namespace SdetBootcampDay3.Answers
 
             RestResponse response = await client.ExecuteAsync(request);
 
-            string serverHeaderValue = response.Headers
-                .Where(x => x.Name.Equals("Server"))
-                .Select(x => x.Value.ToString())
-                .FirstOrDefault();
+            string serverHeaderValue = response.GetHeaderValue("Server");
+
+            // OR string serverHeaderValue = response.Server;
 
             Assert.That(serverHeaderValue, Is.EqualTo("cloudflare"));
         }

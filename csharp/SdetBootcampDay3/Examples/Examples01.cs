@@ -55,12 +55,9 @@ namespace SdetBootcampDay3.Examples
 
             RestResponse response = await client.ExecuteAsync(request);
 
-            string serverHeaderValue = response.Headers
-                .Where(x => x.Name.Equals("CF-Cache-Status"))
-                .Select(x => x.Value.ToString())
-                .FirstOrDefault();
+            string cacheStatusHeaderValue = response.GetHeaderValue("CF-Cache-Status");
 
-            Assert.That(serverHeaderValue, Is.EqualTo("DYNAMIC"));
+            Assert.That(cacheStatusHeaderValue, Is.EqualTo("DYNAMIC"));
         }
 
         [Test]
